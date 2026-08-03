@@ -1,0 +1,14 @@
+__pycache__
+.qt_for_python
+/.idea
+/dist
+/build
+/Models
+/output
+/RandomizerUI/Resources/__Combined.bntx
+/RandomizerUI/Resources/textures/chest/bfres
+/Test
+/exl
+tests.py
+settings.txt
+log.txt
