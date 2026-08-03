@@ -14,8 +14,8 @@ jobs:
     if: github.event.pull_request.merged || github.event_name == 'workflow_dispatch'
     strategy:
       matrix:
-        # os: [windows-latest, macos-latest, ubuntu-latest]
-        os: [windows-latest, ubuntu-latest]
+        os: [windows-latest, macos-latest, ubuntu-latest]
+        # os: [windows-latest, ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - run: echo "Preparing '${{ github.event.ref }}' for release"
@@ -33,4 +33,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: LAS Randomizer-${{ matrix.os }}
-          path: build/*.zip
+          path: dist/release_archive
