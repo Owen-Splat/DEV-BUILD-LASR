@@ -22,6 +22,7 @@ if release_path.exists() and release_path.is_dir():
     shutil.rmtree(release_path)
 
 release_path.mkdir(parents=True, exist_ok=True)
+shutil.copytree("exl", release_path / "exl")
 shutil.copyfile("README.md", release_path / "README.txt")
 shutil.copyfile("LICENSE.txt", release_path / "LICENSE.txt")
 shutil.move(exe_path, release_path / str(base_name + exe_ext))
